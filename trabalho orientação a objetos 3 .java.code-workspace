@@ -1,3 +1,60 @@
-{
-	"folders": []
+package com.mycompany.ciclo3exercicio;
+
+import javax.swing.*;
+      
+public class Ciclo3Exercicio {
+
+    public static void main(String[] args) {
+    
+     String sh, skg;    
+     float h;
+     float kg;
+     double imc;
+    
+    sh= JOptionPane.showInputDialog("Digite sua altura em cm: ");
+    h=Integer.parseInt(sh);
+    
+    skg= JOptionPane.showInputDialog("Agora digite seu peso em kg: ");
+    kg=Integer.parseInt(skg);
+    
+    imc=(kg/(h*h));
+    imc=imc*10000; //convertendo kg/cm² para kg/m²
+    
+    switch (imc);
+    
+  case (imc<17){
+      JOptionPane.showMessageDialog(null,"Atemção! voce esta muito abaixo do peso ideal.\n IMC: " +imc+ " kg/m²");
+      break;
+  } 
+   
+  case (imc>=17&&imc<18.50){
+      JOptionPane.showMessageDialog(null,"Voce esta abaixo do peso ideal. \n IMC: " +imc+ " kg/m²");
+      break;
+  } 
+    
+  case (imc>=18.50&&imc<25){
+      JOptionPane.showMessageDialog(null,"Voce esta no peso ideal. \n IMC: " +imc+ " kg/m²");
+      break;
+  } 
+        
+  case (imc>=25&&imc<30){
+      JOptionPane.showMessageDialog(null,"Atencao! Voce esta um pouco acima do peso ideal! \n IMC: " +imc+ " kg/m²");
+      break;
+  } 
+  
+  case (imc>=30&&imc<35){
+      JOptionPane.showMessageDialog(null,"Atencao! Voce esta com obesidade! \n IMC: " +imc+ " kg/m²");
+      break;
+  }
+
+  case (imc>=35&&imc<40){
+      JOptionPane.showMessageDialog(null,"Cuidado! voce esta com Obesidade severa! \n IMC: " +imc+ " kg/m²");
+      break;
+  }
+  
+   case (imc>=40){
+      JOptionPane.showMessageDialog(null,"Perigo! voce esta com Obesidade morbida! \n IMC: " +imc+ " kg/m²");
+      break;
+  }
+    }
 }
