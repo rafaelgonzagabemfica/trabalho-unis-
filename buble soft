@@ -1,0 +1,15 @@
+public static void bubb lesrt(int[]v)
+{
+    for [var i = v.length - 1; i > 0; i--]
+    {
+    for (var j = 0; j < i; j++)
+      {
+        if (v[j] > v[j + 1])
+        {
+            (v[j], v[j + 1]) = (v[j + 1], v[i]);
+            changes++; 
+        }
+      }
+      if (changes <= 1) break;
+     }
+}
